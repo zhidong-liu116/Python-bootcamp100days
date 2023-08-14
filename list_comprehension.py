@@ -11,3 +11,20 @@ with open("file2.txt") as f:
 result = [nums for nums in lst1 if nums in lst2]
 
 print(result)
+
+'''
+下面是另一种写法
+'''
+
+# Write your code above 👆
+with open("file1.txt") as file1:
+    #lst1 = [int(x) for x in f.read().split()]
+    file1_data = file1.readlines()
+
+with open("file2.txt") as file2:
+    # lst2 = [int(x) for x in f.read().split()]
+    file2_data = file2.readlines()
+
+result = [int(nums) for nums in file1_data if nums in file2_data]
+
+print(result)
