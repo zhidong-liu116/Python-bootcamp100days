@@ -28,3 +28,14 @@ with open("file2.txt") as file2:
 result = [int(nums) for nums in file1_data if nums in file2_data]
 
 print(result)
+
+
+'''
+另一个例子，这里的for和miss_states的list comprehension是一样的概念
+'''
+    if answer_state == "Exit":
+        missing_states = [state for state in all_states if state not in guessed_states]
+    
+        # for state in all_states:
+        #     if state not in guessed_states:
+        #         missing_states.append(state)
